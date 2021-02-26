@@ -30,6 +30,7 @@
 		       spartan-theme
 		       spartan-ivy
 		       spartan-lookup
+		       spartan-org
 		       ))
 
 ;; spartan-layers
