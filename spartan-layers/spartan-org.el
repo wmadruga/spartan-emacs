@@ -38,7 +38,7 @@
 	 org-agenda-include-diary t
 	 org-agenda-skip-scheduled-if-done t
 	 org-agenda-skip-deadline-if-done t
-	 org-agenda-files '("~/src/2nd_brain/brain/TODO-LIST.org" "~/src/2nd_brain/day.org")
+	 org-agenda-files '("~/src/2nd_brain/brain/TODO-LIST.org" "~/src/2nd_brain/brain/Finances.org")
 	 org-agenda-use-time-grid t
 	 appt-display-duration 60)
 

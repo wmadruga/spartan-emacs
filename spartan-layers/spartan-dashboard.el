@@ -19,7 +19,8 @@
 
   (setq dashboard-page-separator "\n\n")
 
-  (setq dashboard-items '((recents  . 5)))
+  (setq dashboard-items '((recents  . 5)
+			  (agenda . 20)))
 
   (setq dashboard-set-init-info t)
 
