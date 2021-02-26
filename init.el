@@ -15,14 +15,14 @@
 		       ;; spartan-projectile
 		       ;; spartan-evil
 		       ;; spartan-kill-ring
-		       ;; spartan-crux
+		       spartan-crux
 		       ;; spartan-webpaste
 		       ;; spartan-shell
-		       ;; spartan-emacs-nw
-		       ;; spartan-vterm
+		       spartan-emacs-nw
+		       spartan-vterm
 		       ;; spartan-macos
-		       ;; spartan-magit
-		       ;; spartan-eglot
+		       spartan-magit
+		       spartan-eglot
 		       ;; spartan-lisp
 		       ;; spartan-bash
 		       ;; spartan-python
