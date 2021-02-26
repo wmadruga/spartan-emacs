@@ -31,6 +31,8 @@
 		       spartan-ivy
 		       spartan-lookup
 		       spartan-org
+		       spartan-js
+		       spartan-misc
 		       ))
 
 ;; spartan-layers
