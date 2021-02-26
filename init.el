@@ -7,7 +7,8 @@
 		       spartan-better-defaults
 		       spartan-binds-global
 
-		       ;;;; spartan-elpa-melpa ; required by layers below
+		       spartan-elpa-melpa ; required by layers below
+		       spartan-no-littering ; loaded as early as possible
 		       ;; spartan-dashboard
 		       ;; spartan-ido
 		       ;; spartan-flymake
@@ -42,7 +43,6 @@
 ;; M-x customize
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-
 (when (file-exists-p custom-file)
   (load-file custom-file))
 
@@ -52,8 +52,8 @@
 
 (defun spartan-user-local-hook ()
   (when (file-directory-p spartan-lisp-d)
-  (dolist (file (directory-files spartan-lisp-d nil "^.*\.el$"))
-    (load-file (concat spartan-lisp-d "/" file)))))
+    (dolist (file (directory-files spartan-lisp-d nil "^.*\.el$"))
+      (load-file (concat spartan-lisp-d "/" file)))))
 
 (add-hook 'emacs-startup-hook 'spartan-user-local-hook)
 
