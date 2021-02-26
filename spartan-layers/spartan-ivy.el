@@ -56,6 +56,7 @@
 	  (project-find-file          . ivy-posframe-display-at-window-center)
 	  (org-brain-goto             . ivy-posframe-display-at-window-center)
 	  (dumb-jump-go               . ivy-posframe-display-at-window-center)
+	  (ivy-switch-buffer          . ivy-posframe-display-at-window-center)
 	  (nil                        . ivy-posframe-display))
 	ivy-posframe-height-alist
 	'((swiper . 20)

@@ -29,6 +29,7 @@
 		       spartan-company
 		       spartan-theme
 		       spartan-ivy
+		       spartan-lookup
 		       ))
 
 ;; spartan-layers
