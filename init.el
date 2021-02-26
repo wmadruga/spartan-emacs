@@ -9,6 +9,7 @@
 
 		       spartan-elpa-melpa ; required by layers below
 		       spartan-no-littering ; loaded as early as possible
+		       spartan-company
 		       ;; spartan-dashboard
 		       ;; spartan-ido
 		       ;; spartan-flymake
