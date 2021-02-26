@@ -16,22 +16,20 @@
   (setq ivy-sort-max-size 7500)
 
   (setq ivy-height 17
-	ivy-wrap t
-	ivy-fixed-height-minibuffer t
-	ivy-read-action-function #'ivy-hydra-read-action
-	ivy-read-action-format-function #'ivy-read-action-format-columns
-	projectile-completion-system 'ivy
-	ivy-use-virtual-buffers nil
-	ivy-virtual-abbreviate 'full
-	ivy-on-del-error-function #'ignore
-	ivy-use-selectable-prompt t
-	ivy-initial-inputs-alist nil)
+  ivy-wrap t
+  ivy-fixed-height-minibuffer t
+  ivy-read-action-function #'ivy-hydra-read-action
+  ivy-read-action-format-function #'ivy-read-action-format-columns
+  projectile-completion-system 'ivy
+  ivy-use-virtual-buffers nil
+  ivy-virtual-abbreviate 'full
+  ivy-on-del-error-function #'ignore
+  ivy-use-selectable-prompt t
+  ivy-initial-inputs-alist nil)
 
   ;; configuring counsel  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   (global-set-key (kbd "C-x b") 'counsel-switch-buffer)
-  (global-set-key (kbd "C-h f") 'counsel-describe-function)
-  (global-set-key (kbd "C-h v") 'counsel-describe-variable)
   (global-set-key (kbd "M-x") 'counsel-M-x)
   (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 
@@ -39,29 +37,33 @@
 
   ;; configuring ivy-posframe ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   (setq ivy-fixed-height-minibuffer nil
-	ivy-posframe-border-width 10
-	ivy-posframe-parameters
-	`((min-width . 90)
-	  (min-height . ,ivy-height)))
+  ivy-posframe-border-width 10
+  ivy-posframe-parameters
+  `((min-width . 90)
+    (min-height . ,ivy-height)))
 
   (setq ivy-posframe-display-functions-alist
-	'((swiper                     . ivy-posframe-display-at-window-center)
-	  (complete-symbol            . ivy-posframe-display-at-window-center)
-	  (counsel-M-x                . ivy-posframe-display-at-window-center)
-	  (counsel-describe-function  . ivy-posframe-display-at-window-center)
-	  (counsel-describe-variable  . ivy-posframe-display-at-window-center)
-	  (counsel-find-file          . ivy-posframe-display-at-window-center)
-	  (counsel-recentf            . ivy-posframe-display-at-window-center)
-	  (project-switch-project     . ivy-posframe-display-at-window-center)
-	  (project-find-file          . ivy-posframe-display-at-window-center)
-	  (org-brain-goto             . ivy-posframe-display-at-window-center)
-	  (dumb-jump-go               . ivy-posframe-display-at-window-center)
-	  (ivy-switch-buffer          . ivy-posframe-display-at-window-center)
-	  (nil                        . ivy-posframe-display))
-	ivy-posframe-height-alist
-	'((swiper . 20)
-	  (dmenu . 20)
-	  (t . 10)))
+  '((swiper                     . ivy-posframe-display-at-window-center)
+    (complete-symbol            . ivy-posframe-display-at-window-center)
+    (counsel-M-x                . ivy-posframe-display-at-window-center)
+    (helpful-callable           . ivy-posframe-display-at-window-center)
+    (helpful-function           . ivy-posframe-display-at-window-center)
+    (helpful-variable           . ivy-posframe-display-at-window-center)
+    (helpful-key                . ivy-posframe-display-at-window-center)
+    (helpful-at-point           . ivy-posframe-display-at-window-center)
+    (helpful-command            . ivy-posframe-display-at-window-center)
+    (counsel-find-file          . ivy-posframe-display-at-window-center)
+    (counsel-recentf            . ivy-posframe-display-at-window-center)
+    (project-switch-project     . ivy-posframe-display-at-window-center)
+    (project-find-file          . ivy-posframe-display-at-window-center)
+    (org-brain-goto             . ivy-posframe-display-at-window-center)
+    (dumb-jump-go               . ivy-posframe-display-at-window-center)
+    (ivy-switch-buffer          . ivy-posframe-display-at-window-center)
+    (nil                        . ivy-posframe-display))
+  ivy-posframe-height-alist
+  '((swiper . 20)
+    (dmenu . 20)
+    (t . 10)))
 
   (ivy-posframe-mode 1) ; 1 enables posframe-mode, 0 disables it.
 
