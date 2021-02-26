@@ -9,8 +9,6 @@
 
 		       spartan-elpa-melpa ; required by layers below
 		       spartan-no-littering ; loaded as early as possible
-		       spartan-company
-		       spartan-theme
 		       ;; spartan-dashboard
 		       ;; spartan-ido
 		       ;; spartan-flymake
@@ -28,6 +26,9 @@
 		       ;; spartan-lisp
 		       ;; spartan-bash
 		       ;; spartan-python
+		       spartan-company
+		       spartan-theme
+		       spartan-ivy
 		       ))
 
 ;; spartan-layers
