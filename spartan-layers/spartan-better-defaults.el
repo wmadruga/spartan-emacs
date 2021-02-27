@@ -18,8 +18,6 @@
 
 (add-hook 'before-save-hook 'whitespace-cleanup) ; auto strip whitespace
 
-(recentf-mode 1) ; track recently opened files
-
 (savehist-mode 1) ; save minibuffer history
 
 (add-hook 'prog-mode-hook 'goto-address-mode) ; make comment urls clickable
@@ -33,8 +31,8 @@
 
 ;; better dired
 (add-hook 'dired-load-hook
-	  (lambda ()
-	    (load "dired-x")))
+    (lambda ()
+      (load "dired-x")))
 
 (setq frame-resize-pixelwise t ; support better certain window managers like ratpoison
 

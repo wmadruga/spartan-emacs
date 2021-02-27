@@ -14,7 +14,7 @@
   (require 'recentf)
   (add-to-list 'recentf-exclude no-littering-var-directory)
   (add-to-list 'recentf-exclude no-littering-etc-directory)
-
+  (recentf-mode 1)
   )
 
 (add-hook 'after-init-hook 'spartan-no-littering-hook)

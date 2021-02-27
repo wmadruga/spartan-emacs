@@ -19,7 +19,6 @@
         ivy-fixed-height-minibuffer t
         ivy-read-action-function #'ivy-hydra-read-action
         ivy-read-action-format-function #'ivy-read-action-format-columns
-        projectile-completion-system 'ivy
         ivy-use-virtual-buffers nil
         ivy-virtual-abbreviate 'full
         ivy-on-del-error-function #'ignore
