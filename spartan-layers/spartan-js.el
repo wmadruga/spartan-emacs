@@ -7,9 +7,11 @@
 (add-to-list 'spartan-package-list 'js2-refactor)
 (add-to-list 'spartan-package-list 'typescript-mode)
 (add-to-list 'spartan-package-list 'rainbow-delimiters)
+(add-to-list 'spartan-package-list 'fill-column-indicator)
 
 (defun spartan-js-config-defaults ()
   "Overriding defaults."
+
   (setq
    js-chain-indent t
    js2-skip-preprocessor-directives t
@@ -26,23 +28,17 @@
    indent-tabs-mode nil
    fill-column 140
    js2-basic-offset 2
-   js-indent-level 2)
-
-  (add-to-list 'auto-mode-alist
-               '("\\.js\\'" . js2-mode)
-               '("\\.js\\'" . display-fill-column-indicator-mode)))
+   js-indent-level 2))
 
 (defun spartan-js-flycheck ()
   "Setup flycheck."
-  (require 'flycheck)
   ;; disable jshint
   (setq-default flycheck-disabled-checkers
-                (append flycheck-disabled-checkers
-                        '(javascript-jshint)
-                        '(json-jsonlist)))
+    (append flycheck-disabled-checkers
+      '(javascript-jshint)
+      '(json-jsonlist)))
   ;; enable eslint
-  (flycheck-add-mode 'javascript-eslint 'js2-mode)
-  )
+  (flycheck-add-mode 'javascript-eslint 'js2-mode))
 
 (defun spartan-js-sdfcli ()
   "Netsuite SDFCLI wrapper - temporary lib I am working on, name is likely to change."
@@ -53,12 +49,19 @@
 
 (defun spartan-js-hook ()
   "Init hook."
+  (require 'flycheck)
+  (require 'rainbow-delimiters)
+  (require 'fill-column-indicator)
+
   (spartan-js-config-defaults)
   (spartan-js-flycheck)
   (spartan-js-sdfcli)
 
-  (add-hook 'js2-mode-hook #'rainbow-delimiters-mode)
-  (add-hook 'js2-mode-hook #'js2-refactor-mode))
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+  (add-hook 'js2-mode-hook 'rainbow-delimiters-mode)
+  (add-hook 'js2-mode-hook 'js2-refactor-mode)
+  (add-hook 'js2-mode-hook 'show-paren-mode)
+  (add-hook 'js2-mode-hook 'fci-mode))
 
 (add-hook 'after-init-hook 'spartan-js-hook)
 
