@@ -9,7 +9,7 @@
 (add-to-list 'spartan-package-list 'origami)
 (add-to-list 'spartan-package-list 'helpful)
 (add-to-list 'spartan-package-list 'ws-butler)
-
+(add-to-list 'spartan-package-list 'dired-single)
 
 ;; (defun spartan-restart ()
 ;;   "For when I was using with chemacs... but it seems I am transitioning to 100% my spartan fork."
@@ -52,11 +52,22 @@
   (global-set-key (kbd "C-s-<left>")  'shrink-window-horizontally)
   (global-set-key (kbd "C-s-<right>") 'enlarge-window-horizontally))
 
+(defun spartan-setup-dired-single ()
+  "Dired-single setup."
+  (require 'dired)
+  (define-key dired-mode-map [remap dired-find-file]
+    'dired-single-buffer)
+  (define-key dired-mode-map [remap dired-mouse-find-file-other-window]
+    'dired-single-buffer-mouse)
+  (define-key dired-mode-map [remap dired-up-directory]
+    'dired-single-up-directory))
+
 (defun spartan-misc-hook ()
   "Configuration a bit more suitable for my work environment."
 
   (couple-personal-overrides)
   (spartan-setup-movements)
+  (spartan-setup-dired-single)
 
   ;; Some of my functions from another emacs configuration
   ;; TODO: might pull them in here if I end up sticking with spartan
