@@ -8,6 +8,7 @@
 (add-to-list 'spartan-package-list 'ivy-posframe)
 (add-to-list 'spartan-package-list 'counsel)
 (add-to-list 'spartan-package-list 'swiper)
+(add-to-list 'spartan-package-list 'prescient)
 
 (defun spartan-configure-ivy ()
   "Ivy configuration."
@@ -23,7 +24,12 @@
         ivy-virtual-abbreviate 'full
         ivy-on-del-error-function #'ignore
         ivy-use-selectable-prompt t
-        ivy-initial-inputs-alist nil))
+        ivy-initial-inputs-alist nil)
+
+  (ivy-prescient-mode 1)
+  (prescient-persist-mode 1)
+
+  )
 
 (defun spartan-configure-counsel ()
   "Counsel configuration."
