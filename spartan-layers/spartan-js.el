@@ -54,6 +54,11 @@
   (global-set-key (kbd "C-c n d") 'netsuite/deploy)
   (global-set-key (kbd "C-c n u") 'netsuite/upload-buffer))
 
+(defun eslint-fix-buffer-file ()
+  "Use eslint to fix buffer file."
+  (interactive)
+  (async-shell-command (concat flycheck-javascript-eslint-executable " --fix " (buffer-file-name))))
+
 (defun spartan-js-hook ()
   "Init hook."
   (require 'flycheck)
@@ -65,6 +70,7 @@
   (spartan-js-sdfcli)
 
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
   (add-hook 'js2-mode-hook 'rainbow-delimiters-mode)
   (add-hook 'js2-mode-hook 'flycheck-mode)
   (add-hook 'js2-mode-hook 'js2-refactor-mode)
