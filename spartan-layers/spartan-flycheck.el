@@ -8,7 +8,7 @@
   "Init hook."
   (setq flycheck-emacs-lisp-load-path 'inherit)
   (setq-default flycheck-temp-prefix ".flycheck")
-  )
+  (setq flycheck-javascript-eslint-executable "~/.npm-packages/bin/eslint"))
 
 (add-hook 'after-init-hook 'spartan-flycheck-hook)
 (add-hook 'prog-mode-hook 'global-flycheck-mode)

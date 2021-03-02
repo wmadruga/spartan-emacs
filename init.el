@@ -16,7 +16,7 @@
   spartan-theme        ; make it available as early as possible, theme will be loaded later
   spartan-dashboard
   ;; spartan-ido
-  ;; spartan-flymake
+  spartan-flymake
   ;; spartan-projectile
   ;; spartan-evil
   ;; spartan-kill-ring
