@@ -57,7 +57,7 @@
 (defun eslint-fix-buffer-file ()
   "Use eslint to fix buffer file."
   (interactive)
-  (async-shell-command (concat flycheck-javascript-eslint-executable " --fix " (buffer-file-name))))
+  (async-shell-command (concat "eslint --fix " (buffer-file-name))))
 
 (defun spartan-js-hook ()
   "Init hook."
