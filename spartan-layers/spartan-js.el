@@ -1,6 +1,11 @@
 ;;; spartan-js --- Javascript support -*- lexical-binding: t; no-byte-compile: t; -*-
 
 ;;; Commentary:
+;;
+;; TODO: Refactor for working with Typescript and React
+;; TODO: Decide whether LSP or eglot
+;; checkout Luke's video: https://www.youtube.com/watch?v=ELOmzi0RW_8
+;; and config: https://gist.github.com/Lukewh/47b200f0af5a632205f0fbec48669647
 
 ;;; Code:
 (add-to-list 'spartan-package-list 'js2-mode)

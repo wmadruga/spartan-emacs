@@ -10,6 +10,7 @@
 (add-to-list 'spartan-package-list 'helpful)
 (add-to-list 'spartan-package-list 'ws-butler)
 (add-to-list 'spartan-package-list 'dired-single)
+(add-to-list 'spartan-package-list 'hnreader)
 
 ;; (defun spartan-restart ()
 ;;   "For when I was using with chemacs... but it seems I am transitioning to 100% my spartan fork."
@@ -62,12 +63,21 @@
   (define-key dired-mode-map [remap dired-up-directory]
     'dired-single-up-directory))
 
+(defun spartan-setup-ibuffer-vc ()
+  "Setup ibuffer-vc."
+  (add-hook 'ibuffer-hook
+            (lambda ()
+              (ibuffer-vc-set-filter-groups-by-vc-root)
+              (unless (eq ibuffer-sorting-mode 'alphabetic)
+                (ibuffer-do-sort-by-alphabetic)))))
+
 (defun spartan-misc-hook ()
   "Configuration a bit more suitable for my work environment."
 
   (couple-personal-overrides)
   (spartan-setup-movements)
   (spartan-setup-dired-single)
+  (spartan-setup-ibuffer-vc)
 
   ;; Some of my functions from another emacs configuration
   ;; TODO: might pull them in here if I end up sticking with spartan
@@ -90,9 +100,7 @@
   (global-set-key (kbd "C-h k")   #'helpful-key)
   (global-set-key (kbd "C-c C-d") #'helpful-at-point)
   (global-set-key (kbd "C-h F")   #'helpful-function)
-  (global-set-key (kbd "C-h C")   #'helpful-command)
-
-  )
+  (global-set-key (kbd "C-h C")   #'helpful-command))
 
 (add-hook 'after-init-hook 'spartan-misc-hook)
 (add-hook 'text-mode-hook 'ws-butler-mode)
