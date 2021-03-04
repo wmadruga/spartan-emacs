@@ -5,6 +5,7 @@
 ;;; Code:
 
 (add-to-list 'spartan-package-list 'ivy)
+(add-to-list 'spartan-package-list 'ivy-prescient)
 (add-to-list 'spartan-package-list 'ivy-posframe)
 (add-to-list 'spartan-package-list 'counsel)
 (add-to-list 'spartan-package-list 'swiper)
