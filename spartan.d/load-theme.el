@@ -29,6 +29,6 @@
 
   (define-key global-map (kbd "<f12>") #'modus-themes-toggle))
 
-(spartan-load-doom-theme)
+(spartan-load-modus-theme)
 
 ;;; load-theme.el ends here
