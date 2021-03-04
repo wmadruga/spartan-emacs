@@ -6,8 +6,13 @@
 ;;; Code:
 (add-to-list 'spartan-package-list 'exec-path-from-shell)
 (add-to-list 'spartan-package-list 'no-littering)
+
 (add-to-list 'spartan-package-list 'doom-themes)
 (add-to-list 'spartan-package-list 'doom-modeline)
+
+(add-to-list 'spartan-package-list 'modus-themes)
+(add-to-list 'spartan-package-list 'modus-vivendi-theme)
+(add-to-list 'spartan-package-list 'modus-operandi-theme)
 
 (defun spartan-setup-no-littering ()
   "Setup no-littering."
