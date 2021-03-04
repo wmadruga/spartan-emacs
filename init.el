@@ -1,5 +1,4 @@
-;;; init.el --- Init file
-;;; -*- lexical-binding: t; no-byte-compile: t; -*-
+;;; init.el --- Init file -*- lexical-binding: t; no-byte-compile: t; -*-
 
 ;;; Commentary:
 ;; configuration -- uncomment desired layers => C-x C-s => M-x spartan-reconfigure
@@ -12,31 +11,41 @@
         spartan-binds-global
 
         spartan-elpa-melpa ; required by layers below
-        spartan-early-load ; stuff to be loaded as early as possible
-        spartan-dashboard
+
+        ;; stuff to be loaded as early as possible
+        spartan-early-load
+
+        ;; Disabled ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
         ;; spartan-ido
-        spartan-flymake
+        ;; spartan-flymake
         ;; spartan-projectile
         ;; spartan-evil
         ;; spartan-kill-ring
-        spartan-crux
+
         ;; spartan-webpaste
         ;; spartan-shell
-        spartan-emacs-nw
-        spartan-vterm
         ;; spartan-macos
-        spartan-magit
-        spartan-eglot
+        ;;spartan-eglot
         ;; spartan-lisp
         ;; spartan-bash
         ;; spartan-python
 
+        ;; Environment and what not ;;;;;;;;;;;;;;;
+        spartan-dashboard
         spartan-org
         spartan-company
         spartan-ivy
+        spartan-crux
+        spartan-emacs-nw
+        spartan-vterm
+
+        ;; Development ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
         spartan-lookup
         spartan-flycheck
         spartan-js
+        spartan-magit
+
+        ;; Everything else ;;;;;;;;;;;;;;;;;;;;;;;;
         spartan-misc
         ))
 

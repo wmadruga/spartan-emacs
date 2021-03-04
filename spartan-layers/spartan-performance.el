@@ -20,5 +20,8 @@
 ;; do not steal focus while doing async compilations
 (setq warning-suppress-types '((comp)))
 
+;; lsp-mode
+(setq read-process-output-max (* 1024 1024)) ;; 1mb
+
 (provide 'spartan-performance)
 ;;; spartan-performance.el ends here

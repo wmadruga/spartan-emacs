@@ -1,10 +1,13 @@
-;;; -*- lexical-binding: t; no-byte-compile: t; -*-
+;;; spartan-eglot --- Eglot setup -*- lexical-binding: t; no-byte-compile: t; -*-
 
-(add-to-list 'spartan-package-list 'eglot)
-
+;;; Commentary:
 ;; https://github.com/joaotavora/eglot
 
+;;; Code:
+(add-to-list 'spartan-package-list 'eglot)
+
 (defun spartan-eglot-hook ()
+  "Init hook."
   (require 'eglot)
   (define-key eglot-mode-map (kbd "M-m dd") 'eldoc)
   (define-key eglot-mode-map (kbd "M-,") 'eglot-rename)
@@ -16,3 +19,4 @@
 (add-hook 'after-init-hook 'spartan-eglot-hook)
 
 (provide 'spartan-eglot)
+;;; spartan-eglot ends here

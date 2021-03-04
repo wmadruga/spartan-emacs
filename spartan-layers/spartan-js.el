@@ -3,7 +3,6 @@
 ;;; Commentary:
 ;;
 ;; TODO: Refactor for working with Typescript and React
-;; TODO: Decide whether LSP or eglot
 ;; checkout Luke's video: https://www.youtube.com/watch?v=ELOmzi0RW_8
 ;; and config: https://gist.github.com/Lukewh/47b200f0af5a632205f0fbec48669647
 
@@ -43,9 +42,9 @@
 
   ;; disable jshint and json
   (setq-default flycheck-disabled-checkers
-    (append flycheck-disabled-checkers
-      '(javascript-jshint)
-      '(json-jsonlist)))
+                (append flycheck-disabled-checkers
+                        '(javascript-jshint)
+                        '(json-jsonlist)))
 
   ;; enable eslint
   (flycheck-add-mode 'javascript-eslint 'js2-mode)
@@ -69,6 +68,7 @@
   (require 'flycheck)
   (require 'rainbow-delimiters)
   (require 'fill-column-indicator)
+  (require 'lsp-mode)
 
   (spartan-js-config-defaults)
   (spartan-js-flycheck)
@@ -80,7 +80,8 @@
   (add-hook 'js2-mode-hook 'flycheck-mode)
   (add-hook 'js2-mode-hook 'js2-refactor-mode)
   (add-hook 'js2-mode-hook 'show-paren-mode)
-  (add-hook 'js2-mode-hook 'fci-mode))
+  (add-hook 'js2-mode-hook 'fci-mode)
+  (add-hook 'js2-mode-hook #'lsp-deferred))
 
 (add-hook 'after-init-hook 'spartan-js-hook)
 
