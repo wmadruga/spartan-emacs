@@ -1,5 +1,8 @@
-;;; -*- lexical-binding: t; no-byte-compile: t; -*-
+;;; spartan-elpa-melpa --- Configures Package repository -*- lexical-binding: t; no-byte-compile: t; -*-
 
+;;; Commentary:
+
+;;; Code:
 (setq spartan-package-list '())
 
 (require 'package)
@@ -17,11 +20,12 @@
 (package-initialize)
 
 (defun spartan-package-bootstrap ()
+  "Package bootstrap."
   (unless package-archive-contents
     (package-refresh-contents))
 
   (dolist (package spartan-package-list)
-    (unless (package-installed-p package)
-      (package-install package))))
+    (package-install package)))
 
 (provide 'spartan-elpa-melpa)
+;;; spartan-elpa-melpa.el ends here
