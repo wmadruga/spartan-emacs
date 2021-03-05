@@ -68,7 +68,6 @@
   (require 'flycheck)
   (require 'rainbow-delimiters)
   (require 'fill-column-indicator)
-  (require 'lsp-mode)
 
   (spartan-js-config-defaults)
   (spartan-js-flycheck)
@@ -81,7 +80,7 @@
   (add-hook 'js2-mode-hook 'js2-refactor-mode)
   (add-hook 'js2-mode-hook 'show-paren-mode)
   (add-hook 'js2-mode-hook 'fci-mode)
-  (add-hook 'js2-mode-hook #'lsp-deferred))
+  (add-hook 'js2-mode-hook 'eglot-ensure))
 
 (add-hook 'after-init-hook 'spartan-js-hook)
 

@@ -25,7 +25,7 @@
         ;; spartan-webpaste
         ;; spartan-shell
         ;; spartan-macos
-        ;;spartan-eglot
+        spartan-eglot
         ;; spartan-lisp
         ;; spartan-bash
         ;; spartan-python

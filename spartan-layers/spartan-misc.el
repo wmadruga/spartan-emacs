@@ -1,4 +1,4 @@
-;;; spartan-misc --- Miscellaneous-*- lexical-binding: t; no-byte-compile: t; -*-
+;;; spartan-misc --- Miscellaneous -*- lexical-binding: t; no-byte-compile: t; -*-
 
 ;;; Commentary:
 
@@ -22,6 +22,9 @@
   "Setup window placement rules."
 
   (setq display-buffer-alist
+
+        ;;TODO: always display vterm on a dedicated, reusable window, add a toggling function, bind to a key
+
         ;; display the window for the async shell command output at the bottom, small height.
         '(("\\.*Async Shell Command.*"
            (display-buffer-at-bottom)

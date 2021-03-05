@@ -9,6 +9,9 @@
 (defun spartan-eglot-hook ()
   "Init hook."
   (require 'eglot)
+
+  (add-to-list 'eglot-server-programs '(js-mode . ("typescript-language-server" "--stdio")))
+
   (define-key eglot-mode-map (kbd "M-m dd") 'eldoc)
   (define-key eglot-mode-map (kbd "M-,") 'eglot-rename)
   (define-key eglot-mode-map (kbd "M-=") 'eglot-format)
