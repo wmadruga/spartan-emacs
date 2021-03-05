@@ -1,6 +1,7 @@
 ;;; spartan-misc --- Miscellaneous-*- lexical-binding: t; no-byte-compile: t; -*-
 
 ;;; Commentary:
+
 ;;; Code:
 (add-to-list 'spartan-package-list 'restart-emacs)
 (add-to-list 'spartan-package-list 'ibuffer-vc)
@@ -16,6 +17,16 @@
 ;;   "For when I was using with chemacs... but it seems I am transitioning to 100% my spartan fork."
 ;;   (interactive)
 ;;   (restart-emacs '("--with-profile" "spartan")))
+
+(defun spartan-setup-window-placement ()
+  "Setup window placement rules."
+
+  (setq display-buffer-alist
+        ;; display the window for the async shell command output at the bottom, small height.
+        '(("\\.*Async Shell Command.*"
+           (display-buffer-at-bottom)
+           (window-height . 0.1)
+           ))))
 
 (defun couple-personal-overrides ()
   "Couple of personal overrides."
@@ -40,7 +51,9 @@
                   eshell-mode-hook
                   vterm-mode-hook
                   term-mode-hook))
-    (add-hook mode (lambda () (display-line-numbers-mode 0)))))
+    (add-hook mode (lambda () (display-line-numbers-mode 0))))
+
+  (spartan-setup-window-placement))
 
 (defun spartan-setup-movements ()
   "Setup some window movements."
