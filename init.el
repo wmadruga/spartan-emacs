@@ -25,7 +25,6 @@
         ;; spartan-webpaste
         ;; spartan-shell
         ;; spartan-macos
-        spartan-eglot
         ;; spartan-lisp
         ;; spartan-bash
         ;; spartan-python
@@ -40,6 +39,7 @@
         spartan-vterm
 
         ;; Development ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+        spartan-eglot
         spartan-lookup
         spartan-flycheck
         spartan-js

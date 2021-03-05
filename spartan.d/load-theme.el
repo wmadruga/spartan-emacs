@@ -29,6 +29,9 @@
 
   (define-key global-map (kbd "<f12>") #'modus-themes-toggle))
 
+
+;; Enabled theme and configurations ;;;;;;;;;;;;;;;;;;;;;;;;;;
 (spartan-load-modus-theme)
+(spartan-configure-modeline)
 
 ;;; load-theme.el ends here
