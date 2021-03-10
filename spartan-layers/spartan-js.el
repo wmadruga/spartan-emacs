@@ -11,7 +11,6 @@
 (add-to-list 'spartan-package-list 'js2-refactor)
 (add-to-list 'spartan-package-list 'json-mode)
 (add-to-list 'spartan-package-list 'typescript-mode)
-(add-to-list 'spartan-package-list 'rainbow-delimiters)
 (add-to-list 'spartan-package-list 'fill-column-indicator)
 
 (defun spartan-js-config-defaults ()
@@ -66,7 +65,6 @@
 (defun spartan-js-hook ()
   "Init hook."
   (require 'flycheck)
-  (require 'rainbow-delimiters)
   (require 'fill-column-indicator)
 
   (spartan-js-config-defaults)
@@ -75,7 +73,6 @@
 
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
-  (add-hook 'js2-mode-hook 'rainbow-delimiters-mode)
   (add-hook 'js2-mode-hook 'flycheck-mode)
   (add-hook 'js2-mode-hook 'js2-refactor-mode)
   (add-hook 'js2-mode-hook 'show-paren-mode)

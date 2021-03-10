@@ -15,6 +15,8 @@
 
 ;; If I ever do more than a few lines of haskell then I really should move this into its own config.
 (add-to-list 'spartan-package-list 'haskell-mode)
+;; Or rather consider a general-development configuration...
+(add-to-list 'spartan-package-list 'rainbow-delimiters)
 
 (defun spartan-setup-window-placement ()
   "Setup window placement rules."
@@ -116,6 +118,9 @@
   (global-set-key (kbd "C-h F")   #'helpful-function)
   (global-set-key (kbd "C-h C")   #'helpful-command))
 
+(require 'rainbow-delimiters)
+
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'after-init-hook 'spartan-misc-hook)
 (add-hook 'text-mode-hook 'ws-butler-mode)
 (add-hook 'prog-mode-hook 'ws-butler-mode)
