@@ -53,7 +53,7 @@
 
 (defun spartan-js-sdfcli ()
   "Netsuite SDFCLI wrapper - temporary lib I am working on, name is likely to change."
-  (load-file "~/src/netsuite-mode.el/netsuite.el")
+  (load-file "~/src/netsuite-sdf/sdfcli.el")
   (global-set-key (kbd "C-c n c") 'netsuite/create-project)
   (global-set-key (kbd "C-c n d") 'netsuite/deploy)
   (global-set-key (kbd "C-c n u") 'netsuite/upload-buffer))
