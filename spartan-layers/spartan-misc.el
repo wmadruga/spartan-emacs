@@ -13,10 +13,8 @@
 (add-to-list 'spartan-package-list 'dired-single)
 (add-to-list 'spartan-package-list 'hnreader)
 
-;; (defun spartan-restart ()
-;;   "For when I was using with chemacs... but it seems I am transitioning to 100% my spartan fork."
-;;   (interactive)
-;;   (restart-emacs '("--with-profile" "spartan")))
+;; If I ever do more than a few lines of haskell then I really should move this into its own config.
+(add-to-list 'spartan-package-list 'haskell-mode)
 
 (defun spartan-setup-window-placement ()
   "Setup window placement rules."
