@@ -27,6 +27,9 @@
 
   (setq dashboard-set-init-info t)
 
+  (with-eval-after-load 'projectile
+    (add-to-list 'dashboard-items '(projects  . 5)))
+
   (setq dashboard-footer-messages '("\"So that we may always have something to offer\"")))
 
 (add-hook 'after-init-hook 'spartan-dashboard-hook)

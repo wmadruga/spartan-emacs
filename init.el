@@ -9,24 +9,16 @@
         spartan-performance
         spartan-better-defaults
         spartan-binds-global
+        spartan-environment ;; new : have a look!
+        spartan-theme       ;; new : have a look!
 
         spartan-elpa-melpa ; required by layers below
 
-        ;; stuff to be loaded as early as possible
+        ;; stuff to be loaded as early as possible, after elpa-melpa
         spartan-early-load
 
-        ;; Disabled ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-        ;; spartan-ido
-        ;; spartan-flymake
-        ;; spartan-projectile
-        ;; spartan-evil
-        ;; spartan-kill-ring
-        ;; spartan-webpaste
-        ;; spartan-shell
-        ;; spartan-macos
-        ;; spartan-lisp
-        ;; spartan-bash
-        ;; spartan-python
+        ;; spartan-kill-ring ;; consider enabling it...
+        ;; spartan-webpaste  ;; have a look and consider...
 
         ;; Environment and what not ;;;;;;;;;;;;;;;
         spartan-dashboard
