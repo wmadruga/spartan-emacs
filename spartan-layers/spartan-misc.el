@@ -118,9 +118,10 @@
   (global-set-key (kbd "C-h F")   #'helpful-function)
   (global-set-key (kbd "C-h C")   #'helpful-command))
 
-(require 'rainbow-delimiters)
+(with-eval-after-load 'rainbow-delimiters
+  (require 'rainbow-delimiters)
+  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'after-init-hook 'spartan-misc-hook)
 (add-hook 'text-mode-hook 'ws-butler-mode)
 (add-hook 'prog-mode-hook 'ws-butler-mode)

@@ -1,8 +1,15 @@
 ;;; spartan-theme --- Spartan Theme -*- lexical-binding: t; no-byte-compile: t; -*-
 
 ;;; Commentary:
+;; theme to be loaded later
 
 ;;; Code:
+
+(add-to-list 'spartan-package-list 'modus-themes)
+(add-to-list 'spartan-package-list 'modus-vivendi-theme)
+(add-to-list 'spartan-package-list 'modus-operandi-theme)
+(add-to-list 'spartan-package-list 'doom-themes)
+(add-to-list 'spartan-package-list 'doom-modeline)
 
 ;; remove hostname from the GUI titlebar
 (setq-default frame-title-format '("Emacs"))
@@ -36,7 +43,7 @@
 (setq initial-scratch-message "
 ; _______  _____  _______  ______ _______ _______
 ; |______ |_____] |_____| |_____/    |    |_____|
-; ______| |       |     | |    \\_   |    |     |
+; ______| |       |     | |    \\_    |    |     |
 
 ")
 
@@ -55,11 +62,11 @@
   "Save the contents of *scratch*."
   (with-current-buffer (get-buffer-create "*scratch*")
     (write-region (point-min) (point-max)
-                  (concat user-emacs-directory "scratch"))))
+                  (concat user-emacs-directory "/var/scratch"))))
 
 (defun load-persistent-scratch ()
   "Reload the scratch buffer."
-  (let ((scratch-file (concat user-emacs-directory "scratch")))
+  (let ((scratch-file (concat user-emacs-directory "/var/scratch")))
     (if (file-exists-p scratch-file)
         (with-current-buffer (get-buffer "*scratch*")
           (delete-region (point-min) (point-max))

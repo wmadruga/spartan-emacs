@@ -59,7 +59,7 @@
  apropos-do-all t
  require-final-newline t
  ediff-window-setup-function 'ediff-setup-windows-plain
- backup-directory-alist `(("." . ,(concat user-emacs-directory "backups")))
+;; backup-directory-alist `(("." . ,(concat user-emacs-directory "backups")))
 
  ;; the most reliable tramp setup I have found (used at work every day...)
  tramp-default-method "ssh"

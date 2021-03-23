@@ -9,18 +9,12 @@
         spartan-performance
         spartan-better-defaults
         spartan-binds-global
-        spartan-environment ;; new : have a look!
-        spartan-theme       ;; new : have a look!
 
         spartan-elpa-melpa ; required by layers below
 
-        ;; stuff to be loaded as early as possible, after elpa-melpa
-        spartan-early-load
-
-        ;; spartan-kill-ring ;; consider enabling it...
-        ;; spartan-webpaste  ;; have a look and consider...
-
-        ;; Environment and what not ;;;;;;;;;;;;;;;
+        ;; Environment etc ;;;;;;;;;;;;;;;
+        spartan-environment
+        spartan-theme
         spartan-dashboard
         spartan-org
         spartan-company
@@ -28,6 +22,7 @@
         spartan-crux
         spartan-emacs-nw
         spartan-vterm
+        spartan-kill-ring
 
         ;; Development ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
         spartan-eglot
