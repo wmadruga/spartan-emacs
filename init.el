@@ -27,7 +27,6 @@
         ;; spartan-lisp
         ;; spartan-bash
         ;; spartan-python
-        ;; spartan-magit
 
         ;; Environment and what not ;;;;;;;;;;;;;;;
         spartan-dashboard
@@ -43,6 +42,7 @@
         spartan-lookup
         spartan-flycheck
         spartan-js
+        spartan-magit
 
         ;; Everything else ;;;;;;;;;;;;;;;;;;;;;;;;
         spartan-misc

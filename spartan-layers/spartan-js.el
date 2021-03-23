@@ -55,7 +55,10 @@
   (load-file "~/src/netsuite-sdf/sdfcli.el")
   (global-set-key (kbd "C-c n c") 'netsuite/create-project)
   (global-set-key (kbd "C-c n d") 'netsuite/deploy)
-  (global-set-key (kbd "C-c n u") 'netsuite/upload-buffer))
+  (global-set-key (kbd "C-c n u") 'netsuite/upload-buffer)
+  (global-set-key (kbd "C-c n 1") 'netsuite/deploy21)
+  (global-set-key (kbd "C-c n 2") 'netsuite/upload-buffer21))
+
 
 (defun eslint-fix-buffer-file ()
   "Use eslint to fix buffer file."
